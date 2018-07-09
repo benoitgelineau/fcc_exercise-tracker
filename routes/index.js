@@ -11,6 +11,6 @@ router.post('/new-user', user_controller.user_create_post);
 router.post("/add", exercise_controller.exercise_create_post);
 
 // GET exercises
-router.get("/log?:userid:from:to:limit", user_controller.user_log_get);
+router.get("/log", exercise_controller.exercise_get);
 
 module.exports = router;
