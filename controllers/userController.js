@@ -1,6 +1,4 @@
 const User = require("../models/user");
-const Exercise = require("../models/exercise");
-// const async = require("async");
 const { body, validationResult } = require("express-validator/check");
 const { sanitizeBody } = require("express-validator/filter");
 
@@ -36,12 +34,8 @@ exports.user_create_post = [
           return next(err);
         }
         // Successful - send new user record in json format.
-        res.json({ username: user.name, _id: user._id });
+        res.json({ username: user.name, id: user.id });
       });
     }
   }
 ];
-
-exports.user_log_get = (req, res, next) => {
-
-}
