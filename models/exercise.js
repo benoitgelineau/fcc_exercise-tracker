@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 const ExerciseSchema = new Schema(
   {
     user: {
-      type: Schema.ObjectId,
+      type: Schema.Types.ObjectId,
       ref: 'User',
       required: true
     },
@@ -28,7 +28,7 @@ const ExerciseSchema = new Schema(
 ExerciseSchema
   .virtual("date_formatted")
   .get(function() {
-    return this.date ? moment(this.date).format("YYYY-MM-DD") : "";
+    return this.date ? moment(this.date).format("D MMMM YYYY") : "";
   });
 
 //Export model
