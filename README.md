@@ -1,5 +1,1 @@
-# Exercise Tracker REST API
-
-#### A microservice project, part of Free Code Camp's curriculum
-
-
+# Exercise Tracker REST API for FCC
